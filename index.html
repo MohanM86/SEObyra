@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seobyrå.com — Norges ledende SEO- og AEO-byrå</title>
+<meta name="description" content="Norges fremste SEO- og AEO-byrå. Vi gjør bedrifter synlige i Google, ChatGPT, Perplexity og AI Overviews. Teknisk SEO, innholdsstrategi, AI-søkeoptimalisering og lenkebygging.">
+<meta name="keywords" content="SEO byrå, søkemotoroptimalisering, AEO, AI-søkeoptimalisering, teknisk SEO, innholdsstrategi, lenkebygging, lokal SEO, Norge">
+<meta property="og:title" content="Seobyrå.com — Norges ledende SEO- og AEO-byrå">
+<meta property="og:description" content="Søkemotoroptimalisering og AI-søkeoptimalisering for norske bedrifter som vil dominere — ikke bare delta.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seobyra.vercel.app">
+<link rel="canonical" href="https://seobyra.vercel.app">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c8ff00'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='16' fill='%2308080a'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{--font-display:'Instrument Serif',Georgia,serif;--font-body:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;--accent:#c8ff00;--bg:#08080a;--text:#e8e6e1}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);color:var(--text);background:var(--bg);overflow-x:hidden}
+::selection{background:var(--accent);color:var(--bg)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .7s cubic-bezier(.16,1,.3,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .4s}
+.nav.scrolled{background:rgba(8,8,10,.92);backdrop-filter:blur(24px) saturate(1.2);border-bottom:1px solid rgba(255,255,255,.04)}
+.nav-inner{max-width:1260px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:72px;padding:0 clamp(20px,4vw,48px)}
+.nav-logo{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;color:var(--text)}
+.nav-logo span{font-size:17px;font-weight:700;font-family:var(--font-display);letter-spacing:-.03em}
+.nav-logo small{font-weight:400;color:rgba(255,255,255,.3);font-size:13px}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-btn{background:none;border:none;color:rgba(255,255,255,.55);font-size:13.5px;font-weight:500;padding:8px 14px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px;transition:color .2s;letter-spacing:.01em}
+.nav-btn:hover,.nav-btn.active{color:var(--accent)}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:rgba(16,16,20,.97);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:8px 0;backdrop-filter:blur(20px);box-shadow:0 16px 48px rgba(0,0,0,.5);display:none}
+.nav-item:hover .nav-dropdown{display:block}
+.nav-drop-btn{display:flex;align-items:center;gap:10px;width:100%;padding:10px 18px;background:none;border:none;color:rgba(255,255,255,.6);font-size:13.5px;cursor:pointer;font-family:inherit;text-align:left;transition:all .15s}
+.nav-drop-btn:hover{background:rgba(255,255,255,.04);color:var(--text)}
+.nav-drop-btn.active{background:rgba(200,255,0,.06);color:var(--accent)}
+.btn-cta{margin-left:8px;padding:9px 22px;background:var(--accent);color:var(--bg);border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:.03em;transition:all .2s}
+.btn-cta:hover{background:#dfff4f;transform:translateY(-1px)}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;background:var(--accent);color:var(--bg);border:none;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:.03em;transition:all .25s}
+.btn-primary:hover{background:#dfff4f;transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,255,0,.2)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.12);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;transition:all .25s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* SECTIONS */
+.section{padding:100px clamp(20px,4vw,48px)}
+.container{max-width:1260px;margin:0 auto}
+.container-sm{max-width:820px;margin:0 auto}
+.label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.heading{font-family:var(--font-display);font-weight:300;line-height:1.15;letter-spacing:-.025em}
+.heading em{font-style:italic;font-weight:600}
+
+/* CARDS */
+.service-card{width:100%;padding:40px 32px;background:rgba(255,255,255,.012);border:1px solid rgba(255,255,255,.04);cursor:pointer;text-align:left;font-family:inherit;color:var(--text);transition:all .35s;position:relative;overflow:hidden;min-height:200px}
+.service-card:hover{border-color:rgba(200,255,0,.25);background:rgba(200,255,0,.02);transform:translateY(-3px)}
+.case-card{background:rgba(255,255,255,.015);border:1px solid rgba(255,255,255,.04);padding:32px;position:relative;overflow:hidden;transition:all .3s}
+.case-card:hover{border-color:rgba(200,255,0,.2);transform:translateY(-2px)}
+.case-bar{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent) var(--bar),transparent)}
+.related-card{width:100%;padding:28px 24px;background:rgba(255,255,255,.012);border:1px solid rgba(255,255,255,.04);cursor:pointer;text-align:left;font-family:inherit;color:var(--text);transition:all .3s}
+.related-card:hover{border-color:rgba(200,255,0,.2);transform:translateY(-2px)}
+
+/* CONTENT */
+.content-section{margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.04)}
+.content-section:last-child{border-bottom:none}
+.content-section h2{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:500;letter-spacing:-.015em}
+.content-section p{font-size:15.5px;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:16px}
+
+/* TOC */
+.toc{padding:24px 28px;background:rgba(255,255,255,.015);border:1px solid rgba(255,255,255,.04);border-radius:4px;margin-bottom:48px}
+.toc-item{font-size:14px;color:rgba(255,255,255,.5);line-height:1.6;padding:3px 0}
+.toc-num{color:rgba(200,255,0,.4);margin-right:8px;font-size:12px;font-weight:600}
+
+/* FORM */
+.form-group{margin-bottom:28px}
+.form-label{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.25);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:8px}
+.form-input{width:100%;padding:12px 0;font-size:15px;font-family:inherit;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.1);color:var(--text);outline:none;transition:border-color .3s}
+.form-input:focus{border-bottom-color:var(--accent)}
+.form-input::placeholder{color:rgba(255,255,255,.2)}
+textarea.form-input{resize:none;min-height:80px}
+
+/* FOOTER */
+.footer{border-top:1px solid rgba(255,255,255,.04);padding:56px clamp(20px,4vw,48px) 36px}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px}
+.footer-heading{font-size:11px;font-weight:600;color:rgba(255,255,255,.2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.footer-link{display:block;background:none;border:none;font-size:13.5px;color:rgba(255,255,255,.4);cursor:pointer;font-family:inherit;padding:3px 0;transition:color .2s;text-align:left}
+.footer-link:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.04);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* GRID LINES */
+.grid-line{position:absolute;top:0;width:1px;height:100%;background:rgba(255,255,255,.02);pointer-events:none}
+.glow{position:absolute;pointer-events:none;border-radius:50%}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr)!important}
+  .services-grid,.cases-grid,.related-grid{grid-template-columns:1fr!important}
+  .aeo-grid,.contact-grid{grid-template-columns:1fr!important}
+  .toc-grid{grid-template-columns:1fr!important}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.2)}
+</style>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Seobyrå.com",
+  "url": "https://seobyra.vercel.app",
+  "description": "Norges ledende SEO- og AEO-byrå. Søkemotoroptimalisering og AI-søkeoptimalisering for norske bedrifter.",
+  "parentOrganization": {"@type": "Organization", "name": "IT-FIRMA"},
+  "areaServed": {"@type": "Country", "name": "Norway"},
+  "knowsAbout": ["SEO", "Search Engine Optimization", "AEO", "AI Search Optimization", "Technical SEO", "Content Strategy", "Link Building", "Local SEO"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Hva koster SEO?", "acceptedAnswer": {"@type": "Answer", "text": "SEO-tjenester i Norge koster typisk mellom 5 000 og 40 000 kr per måned, avhengig av konkurransenivå, antall søkeord og omfanget av arbeidet."}},
+    {"@type": "Question", "name": "Hva er AI-søkeoptimalisering (AEO)?", "acceptedAnswer": {"@type": "Answer", "text": "AEO (Answer Engine Optimization) handler om å optimalisere innhold slik at det siteres av AI-drevne søkemotorer som ChatGPT, Perplexity og Google AI Overviews."}},
+    {"@type": "Question", "name": "Hvor lang tid tar det å se SEO-resultater?", "acceptedAnswer": {"@type": "Answer", "text": "Typisk ser man første forbedringer etter 2-3 måneder, tydelige resultater etter 4-6 måneder, og full effekt etter 8-12 måneder."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script>
+const e=React.createElement,{useState,useEffect,useRef,useCallback,createContext,useContext}=React;
+
+// ── ICONS (all custom SVG) ──
+const Ic={
+  Search:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round"},e("circle",{cx:10.5,cy:10.5,r:7}),e("path",{d:"M21 21l-5.2-5.2"})),
+  Code:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("polyline",{points:"16 18 22 12 16 6"}),e("polyline",{points:"8 6 2 12 8 18"})),
+  Link:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round"},e("path",{d:"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"}),e("path",{d:"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"})),
+  Chart:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round"},e("path",{d:"M3 3v18h18"}),e("path",{d:"M7 16l4-8 4 4 5-9"})),
+  Robot:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("rect",{x:4,y:8,width:16,height:12,rx:2}),e("path",{d:"M12 2v6"}),e("circle",{cx:9,cy:13,r:1}),e("circle",{cx:15,cy:13,r:1}),e("path",{d:"M9 17h6"}),e("circle",{cx:12,cy:2,r:1})),
+  MapPin:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5"},e("path",{d:"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"}),e("circle",{cx:12,cy:9,r:2.5})),
+  Pencil:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("path",{d:"M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"})),
+  Shield:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("path",{d:"M12 2l8 4v6c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z"})),
+  Target:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5"},e("circle",{cx:12,cy:12,r:10}),e("circle",{cx:12,cy:12,r:6}),e("circle",{cx:12,cy:12,r:2})),
+  Globe:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5"},e("circle",{cx:12,cy:12,r:10}),e("ellipse",{cx:12,cy:12,rx:4,ry:10}),e("path",{d:"M2 12h20"})),
+  Gauge:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round"},e("circle",{cx:12,cy:12,r:10}),e("path",{d:"M12 6v6l4 2"})),
+  File:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("path",{d:"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"}),e("polyline",{points:"14 2 14 8 20 8"})),
+  Network:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5"},e("circle",{cx:12,cy:5,r:3}),e("circle",{cx:5,cy:19,r:3}),e("circle",{cx:19,cy:19,r:3}),e("path",{d:"M12 8v3M9.5 13.5L6.5 16.5M14.5 13.5l3 3"})),
+  Eye:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5"},e("path",{d:"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"}),e("circle",{cx:12,cy:12,r:3})),
+  Arrow:({s=24,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"},e("path",{d:"M5 12h14"}),e("path",{d:"M12 5l7 7-7 7"})),
+  ChevDown:({s=14,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 24 24",fill:"none",stroke:c,strokeWidth:"2",strokeLinecap:"round"},e("path",{d:"M6 9l6 6 6-6"})),
+  Check:({s=12,c="currentColor"})=>e("svg",{width:s,height:s,viewBox:"0 0 12 12",fill:"none",stroke:c,strokeWidth:"2",strokeLinecap:"round"},e("path",{d:"M2 6l3 3 5-5"})),
+};
+
+// ── REVEAL COMPONENT ──
+function Reveal({children,delay=0,style={}}){
+  const[v,setV]=useState(false),ref=useRef(null);
+  useEffect(()=>{const o=new IntersectionObserver(([en])=>{if(en.isIntersecting){setV(true);o.disconnect()}},{threshold:.1});if(ref.current)o.observe(ref.current);return()=>o.disconnect()},[]);
+  return e("div",{ref,style:{...style,opacity:v?1:0,transform:v?"translateY(0)":"translateY(36px)",transition:`opacity .7s cubic-bezier(.16,1,.3,1) ${delay}s, transform .7s cubic-bezier(.16,1,.3,1) ${delay}s`}},children);
+}
+
+// ── PARALLAX ──
+function useParallax(speed=.15){
+  const ref=useRef(null),[off,setOff]=useState(0);
+  useEffect(()=>{const h=()=>{if(!ref.current)return;const r=ref.current.getBoundingClientRect();setOff((r.top+r.height/2-window.innerHeight/2)*speed)};window.addEventListener("scroll",h,{passive:true});return()=>window.removeEventListener("scroll",h)},[speed]);
+  return{ref,off};
+}
+
+// ── ROUTER ──
+const Ctx=createContext({page:"hjem",go:()=>{}});
+
+// ══════════════════════════════════════════
+// PAGES DATA
+// ══════════════════════════════════════════
+const PAGES={
+"teknisk-seo":{title:"Teknisk SEO",sub:"Grunnmuren for synlighet",icon:"Code",hero:"Teknisk SEO handler om å sikre at søkemotorer kan oppdage, crawle, indeksere og forstå nettstedet ditt korrekt. Uten et solid teknisk fundament vil selv det beste innholdet forbli usynlig.",secs:[
+{t:"Crawling og indeksering",c:"Googleboten crawler nettet ved å følge lenker fra side til side. For at sidene dine skal indekseres, må de være tilgjengelige via en logisk intern lenkestruktur, ha et oppdatert XML-sitemap, og ikke blokkeres av robots.txt eller noindex-direktiver.\n\nEn vanlig feil er å utilsiktet blokkere viktige sider gjennom feilkonfigurert robots.txt, eller å ha så mange nivåer i nettstedsarkitekturen at Googleboten ikke når de dypeste sidene innenfor sitt crawl-budsjett."},
+{t:"Core Web Vitals",c:"Core Web Vitals er Googles måleparametere for brukeropplevelse og en bekreftet rangeringsfaktor.\n\nLargest Contentful Paint (LCP): Hvor raskt det største synlige elementet lastes. Mål: under 2,5 sekunder.\n\nInteraction to Next Paint (INP): Måler responshastigheten på brukerinteraksjoner. Mål: under 200ms.\n\nCumulative Layout Shift (CLS): Visuell stabilitet. Mål: under 0,1. Fiks ved å definere eksplisitte dimensjoner for bilder og unngå dynamisk injisert innhold over folden."},
+{t:"Nettstedsarkitektur",c:"En flat, logisk arkitektur sikrer at alle sider er tilgjengelige innen 3 klikk fra forsiden. Siloed architecture (tematisk gruppering) hjelper Google med å forstå tematisk relevans.\n\nBruk breadcrumbs med Schema.org-markup. Interne lenker bør fordele PageRank strategisk. Hub-and-spoke-modellen fungerer godt: én pillarside med dyptgående innhold lenker til og fra detaljerte undersider."},
+{t:"Schema.org og strukturert data",c:"Strukturert data gir søkemotorer maskinlesbar kontekst om innholdet ditt. JSON-LD er det anbefalte formatet. Viktige Schema-typer: Organization, FAQPage, HowTo, Article, BreadcrumbList, LocalBusiness.\n\nStrukturert data er også kritisk for AEO — AI-modeller bruker Schema.org for å tolke og sitere innhold."},
+{t:"Hastighetsoptimalisering",c:"Hvert sekund ekstra lastetid reduserer konverteringen med opptil 7 %. Nøkkeltiltak: Bilder i WebP/AVIF-format med lazy loading. JavaScript code splitting og tree shaking. Inline kritisk CSS. HTTP/2 med Brotli-komprimering via CDN. Font-display: swap med preload for kritiske fonter."},
+{t:"Mobilvennlighet",c:"Google bruker mobile-first indexing — det er mobilversjonen som indekseres og rankes. Responsive design er standard, men sjekk at touchelementer har minst 48×48px, at innhold ikke er skjult bak click-to-expand, og at bilder skalerer korrekt."},
+{t:"HTTPS og sikkerhet",c:"HTTPS er en bekreftet rangeringsfaktor. Sørg for at HTTP redirecter med 301 til HTTPS, at mixed content elimineres, og at HSTS-headere er konfigurert."},
+{t:"Internasjonalisering (hreflang)",c:"For flerspråklige nettsteder brukes hreflang-attributtet til å fortelle Google hvilken språkversjon som skal vises. Implementeres i HTML head, HTTP-headers, eller XML-sitemap."}
+]},
+
+"innholdsstrategi":{title:"Innholdsstrategi",sub:"Innhold som ranker og konverterer",icon:"Pencil",hero:"Innholdsstrategi for SEO handler om å skape systematisk, autoritativt innhold som dekker hele kundereisen og som posisjonerer deg som den definitive kilden i din bransje.",secs:[
+{t:"Søkeordsanalyse",c:"Søkeordsanalyse er fundamentet. De fire søkeintensjonene: Informasjonell (brukeren søker kunnskap), Navigasjonell (brukeren søker en bestemt side), Kommersiell (brukeren undersøker alternativer), og Transaksjonell (brukeren er klar til handling).\n\nVerktøy: Google Keyword Planner, Ahrefs, SEMrush, Google Search Console, Google Trends. For det norske markedet er det viktig å analysere både bokmål og nynorsk-varianter."},
+{t:"Topical authority",c:"Topical authority betyr å bli den mest komplette kilden innenfor et emneområde. Modellen: Én pillarside (2000-5000 ord) som gir helhetlig oversikt, omgitt av 10-30 klyngesider som går i dybden på spesifikke undertemaer. Alle sider lenker til og fra pillarsiden.\n\nGoogle belønner denne tilnærmingen fordi den demonstrerer E-E-A-T innenfor temaet."},
+{t:"E-E-A-T: Erfaring, Ekspertise, Autoritet, Troverdighet",c:"E-E-A-T reflekteres i hundrevis av signaler Google bruker. For YMYL-innhold (helse, finans, juss) er det spesielt kritisk.\n\nPraktiske tiltak: Forfatterbiografier med ekspertisedokumentasjon, siteringer til primærkilder, oppdateringsdatoer, klare redaksjonelle retningslinjer."},
+{t:"Innholdsproduksjon",c:"Strukturer med H1 (primærordet), H2-er for delområder, H3-er for detaljer. Bruk featured snippet-optimalisering: svar direkte på spørsmålet i 40-60 ord rett under H2-overskriften.\n\nKvalitet trumfer kvantitet, men for konkurranseutsatte søkeord kreves typisk 1500-3000 ord."},
+{t:"Innholdsoppdatering",c:"Google foretrekker oppdatert innhold. Gjør kvartalsvis audit: identifiser sider med synkende trafikk, oppdater fakta, konsolider tynt innhold, og redirect irrelevante sider. Uten vedlikehold mister selv godt innhold rangeringer over tid."}
+]},
+
+"aeo":{title:"AI-søkeoptimalisering (AEO)",sub:"Synlighet i AI-genererte svar",icon:"Robot",hero:"AEO (Answer Engine Optimization) er den nye disiplinen innen søkeoptimalisering. Når ChatGPT, Perplexity og Google AI Overviews genererer svar, henter de fra et utvalg kilder. AEO handler om å sikre at din bedrift er blant dem.",secs:[
+{t:"Hva er AEO?",c:"AEO er prosessen med å optimalisere innhold slik at det siteres og refereres til av AI-drevne søkemotorer. Mens tradisjonell SEO fokuserer på å rangere i Googles ti blå lenker, handler AEO om å bli den kilden AI-modeller velger å sitere.\n\nDette er et paradigmeskifte: fra å konkurrere om klikk til å konkurrere om sitering."},
+{t:"Hvordan AI-søkemotorer velger kilder",c:"AI-modeller velger kilder basert på: Domeneautoritet (etablerte, troverdige domener). Innholdskvalitet (klare, velstrukturerte, faktabaserte svar). Strukturert data (Schema.org). Siteringskvalitet (innhold som selv siterer primærkilder). Oppdaterthet. Konsensus (informasjon som samsvarer med andre autoritative kilder)."},
+{t:"Optimalisering for ChatGPT",c:"Vær den definitive kilden innen ditt emne. Bruk klare definisjoner som er enkle å sitere. Strukturert format: lister, tabeller, punkt-for-punkt. Forfatter-autoritet: innhold fra anerkjente eksperter siteres oftere. Regelmessig publisering øker sannsynligheten for inkludering i fremtidige treningsdatasett."},
+{t:"Optimalisering for Google AI Overviews",c:"Google AI Overviews genererer AI-svar direkte i søkeresultatene. Kildene som siteres er typisk allerede høyt-rangerende sider. Nøkkelen er å rangere godt i tradisjonell SEO OG ha innhold formatert for AI-ekstraksjon: direkte svar, bullet-lister, tabeller, trinn-for-trinn."},
+{t:"Optimalisering for Perplexity",c:"Perplexity er en AI-søkemotor som alltid oppgir kilder med inline-siteringer. Høy SEO-rangering er forutsetningen. Klare, konkrete fakta siteres oftest. Autoritative domener foretrekkes. Fersk informasjon verdsettes høyt."},
+{t:"LLM-optimalisering",c:"For å påvirke hva store språkmodeller sier om din bedrift trengs en langsiktig strategi: Publiser konsistent innhold som kobler merkevaren din med bestemte emner. Bli sitert av andre autoritative kilder. Wikipedia-tilstedeværelse er gull verdt. Publiser i fagblader og sosiale medier.\n\nDette er en 12-24 måneders strategi, men effekten er enorm: når en LLM konsekvent anbefaler din bedrift, er det vanskelig for konkurrenter å ta den posisjonen."},
+{t:"Structured data for AEO",c:"Schema.org-markup er broen mellom menneskelig innhold og maskinforståelse. For AEO: FAQPage (siterbare Q&A-par), HowTo (trinn-for-trinn), Article med author og dateModified, ClaimReview for faktasjekk, DefinedTerm for konseptdefinisjoner.\n\nI tillegg: ren HTML-semantikk med hierarkiske overskrifter, meta descriptions som fungerer som mikrositering."},
+{t:"Måling av AEO-resultater",c:"Manuell testing: Spør ChatGPT, Perplexity og Google AI Overviews regelmessig. Trafikk fra AI-kilder i GA4. Brand monitoring med Mention eller Brandwatch. Månedlig logg over sitering og anbefalinger fra AI-plattformer."}
+]},
+
+"lenkebygging":{title:"Lenkebygging",sub:"Bygg domeneautoritet strategisk",icon:"Link",hero:"Lenker fra andre nettsteder er fortsatt en av de sterkeste rangeringsfaktorene. Kvalitetslenker fungerer som tillitsstemmer — de signaliserer at andre ser innholdet ditt som verdifullt.",secs:[
+{t:"Hvorfor lenker fortsatt er viktige",c:"Googles opprinnelige innovasjon — PageRank — var basert på lenkeanalyse. Lenker er fortsatt en av de tre viktigste rangeringsfaktorene sammen med innhold og RankBrain. En lenke fra et autoritativt nettsted gir mer verdi enn hundre fra irrelevante kataloger."},
+{t:"White-hat lenkebygging",c:"Bærekraftige metoder: Original research som andre siterer. Dyptgående guider. Gratis verktøy og kalkulatorer. Digital PR med nyhetsverdig innhold. Gjesteinnlegg i bransjerelevante medier. Broken link building. Ressurssider og bransjeguider."},
+{t:"Lenker å unngå",c:"Google straffer manipulative metoder: Kjøpte lenker. PBN-er (Private Blog Networks). Automatiserte lenker i kommentarfelt. Lenkefarmer. Irrelevante kataloger. Straffen kan være algoritmisk eller manuell — recovery kan ta 6-12 måneder."},
+{t:"Intern lenkebygging",c:"Interne lenker er undervurdert. Bruk deskriptive ankertekster. Lenk fra høyautoritets-sider til nye sider du vil løfte. Opprett tematiske klynger med pillarside og klyngesider."}
+]},
+
+"lokal-seo":{title:"Lokal SEO",sub:"Dominer i ditt nærområde",icon:"MapPin",hero:"46 % av alle Google-søk har lokal intensjon, og 76 % av de som søker lokalt besøker en bedrift innen 24 timer.",secs:[
+{t:"Google Business Profile",c:"Det viktigste verktøyet for lokal SEO. Optimalisering: Riktige kategorier. Detaljert bedriftsbeskrivelse. Minst 10 kvalitetsbilder. Google Posts ukentlig. Svar på alle anmeldelser. NAP-konsistens (Name, Address, Phone) på tvers av alle plattformer er kritisk."},
+{t:"Lokale landingssider",c:"For bedrifter med flere lokasjoner: lag unike landingssider for hvert sted med genuint lokalt innhold, stedsspesifikke bilder, og LocalBusiness Schema-markup."},
+{t:"Anmeldelser",c:"Google-anmeldelser er topp 3 rangeringsfaktor for Local Pack. Mål: minst 4,0 i snitt, jevn strøm av nye anmeldelser. Svar på alle innen 24 timer."}
+]},
+
+"on-page-seo":{title:"On-page SEO",sub:"Optimaliser hver enkelt side",icon:"File",hero:"On-page SEO dekker alt fra titler og meta descriptions til innholdsstruktur, intern lenking og bildeoptimalisering.",secs:[
+{t:"Tittel-tag og meta description",c:"Tittel-taggen er det viktigste on-page-elementet. Inkluder primærordet tidlig, hold under 60 tegn. Meta description: under 155 tegn, inkluder call-to-action."},
+{t:"Overskriftshierarki",c:"H1 for hovedoverskrift (primærordet). H2-er for seksjoner. H3-er for underseksjoner. Skriv H2-er som spørsmål for featured snippets."},
+{t:"URL-struktur",c:"Korte, beskrivende URL-er med søkeord. Bindestrek mellom ord. Unngå tall og parametre. Bruk alltid 301-redirect ved endring."},
+{t:"Bildeoptimalisering",c:"Beskrivende filnavn, alt-tekst med søkeord, WebP/AVIF-format, lazy loading, definerte width/height, srcset for responsiv lasting."}
+]},
+
+"sokemotorer":{title:"Søkemotorer",sub:"Forstå landskapet",icon:"Globe",hero:"Google dominerer med over 90 % markedsandel i Norge, men AI-drevne alternativer vokser raskt og endrer fundamentalt hvordan folk finner informasjon.",secs:[
+{t:"Google",c:"Over 8,5 milliarder søk per dag globalt. 93 % markedsandel i Norge. Algoritmen bruker hundrevis av rangeringsfaktorer, men de viktigste er innholdskvalitet, lenker og brukeropplevelse. Core updates 3-4 ganger per år."},
+{t:"Google AI Overviews",c:"Lansert 2024. AI-generert svarblokk over tradisjonelle søkeresultater. Posisjon 1 garanterer ikke lenger synlighet — AEO-strategi er nødvendig for å bli sitert."},
+{t:"Bing og Microsoft Copilot",c:"3-4 % markedsandel i Norge, men driver Microsoft Copilot og brukes av flere AI-søkemotorer. Bing Webmaster Tools gir unik innsikt."},
+{t:"Perplexity",c:"AI-native søkemotor med inline-siteringer. Transparent om kilder — du ser nøyaktig når innholdet ditt siteres."},
+{t:"ChatGPT Search",c:"Over 200 millioner ukentlige brukere. Bruker Bing-indeksen for nettresultater, noe som gjør Bing-optimalisering enda mer relevant."}
+]},
+
+"konvertering":{title:"Konverteringsoptimalisering",sub:"Fra trafikk til kunder",icon:"Chart",hero:"Organisk trafikk uten konvertering er bare en vanitetsmetrikk. CRO handler om å designe brukerreisen slik at besøkende fra søk faktisk gjennomfører handlingen du ønsker.",secs:[
+{t:"Landingsside-optimalisering",c:"Klar overskrift som matcher søkeordet. Verdiforslag synlig innen 3 sekunder. Tydelig CTA over folden. Tillitssignaler: anmeldelser, kundelogoer. Rask lasting under 2,5 sekunder. Mobiloptimalisert."},
+{t:"CTA-strategi",c:"Primær CTA for handlingsklare, sekundær for research-fasen. Plasser strategisk: over folden, etter nøkkelargumenter, i sticky elementer."},
+{t:"A/B-testing",c:"Test én variabel om gangen. La tester kjøre til statistisk signifikans (minimum 95 % konfidensintervall). Verktøy: VWO, Optimizely, GA4."}
+]},
+
+"analyse":{title:"SEO-analyse og verktøy",sub:"Datadrevet optimalisering",icon:"Gauge",hero:"Effektiv SEO krever kontinuerlig måling. Med de rette verktøyene kan du identifisere muligheter, spore fremgang, og justere strategi basert på data.",secs:[
+{t:"Google Search Console",c:"Det viktigste gratisverktøyet. Viser søkeord, visninger, klikk, indekseringsstatus og Core Web Vitals. Nøkkelrapporter: Ytelse, Indeksering, Erfaring, Forbedringer."},
+{t:"Google Analytics 4",c:"Innsikt i brukeratferd: Trafikkanskaffelse (organisk vs. andre), Engasjement, Konverteringer. Sett opp hendelsesbaserte konverteringsmål for å spore verdien av organisk trafikk."},
+{t:"Tredjepartsverktøy",c:"Ahrefs: Best for lenkeanalyse og konkurrentovervåking. SEMrush: Bred plattform med søkeordsovervåking og site audit. Screaming Frog: Teknisk SEO-crawler. PageSpeed Insights: Core Web Vitals."},
+{t:"KPI-er for SEO",c:"Organisk trafikk. Søkeordrangeringer. Synlighetsindeks. Organisk CTR. Konverteringer fra organisk. Sideindeksering. Core Web Vitals-verdier. Lenkestatistikk."}
+]},
+
+"ordliste":{title:"SEO-ordliste",sub:"Komplett fagordliste A–Å",icon:"File",hero:"Alle viktige begreper innen SEO, AEO og digital synlighet.",secs:[
+{t:"A",c:"AEO (Answer Engine Optimization): Optimalisering for AI-svargenereringsmotorer. Alt-tekst: Beskrivende tekst for bilder. Algoritme: Regler søkemotorer bruker for rangering. Ankertekst: Klikkbar tekst i en lenke. Autoritet: Nettsteds troverdighet."},
+{t:"B–D",c:"Backlink: Lenke fra annet nettsted. Black hat: Manipulative teknikker. Bounce rate: Andel som forlater uten interaksjon. Canonical: Foretrukket versjon av duplikatside. Core Web Vitals: LCP, INP, CLS. Crawling: Søkemotorer skanner sider. CTR: Klikkrate. Domain Rating: Ahrefs-metrikk (0-100)."},
+{t:"E–I",c:"E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness. Featured snippet: Fremhevet svar øverst i Google. Google AI Overviews: AI-generert svarblokk. GSC: Google Search Console. Hreflang: Språk/region-angivelse. Indeksering: Søkemotorer lagrer sider."},
+{t:"J–O",c:"JSON-LD: Strukturert data-format. Keyword cannibalization: Flere sider konkurrerer om samme ord. Knowledge Graph: Googles kunnskapsdatabase. LLM: Stor språkmodell. Local Pack: Tre lokale resultater med kart. Mobile-first indexing: Mobilversjonen indekseres primært. NAP: Name, Address, Phone. Organisk trafikk: Ubetalte søkeresultater."},
+{t:"P–Å",c:"PageRank: Googles lenkealgoritme. Pillarside: Hovedside i innholdskluster. Robots.txt: Instruerer crawlere. Schema.org: Strukturert data-vokabular. SERP: Søkeresultatside. Sitemap: XML-fil med alle sider. Topical authority: Autoritet innenfor emne. YMYL: Innhold som påvirker helse/økonomi. Zero-click: Søk besvart uten klikk."}
+]},
+
+"nettverk":{title:"Vårt kunnskapsnettverk",sub:"Norges mest omfattende SEO-økosystem",icon:"Network",hero:"Vi eier og drifter et nettverk av autoritative kunnskapsportaler som sammen utgjør Norges mest komplette ressurs innen SEO og digital synlighet.",secs:[
+{t:"seoai.no",c:"Norges ledende kunnskapsportal for AI-drevet SEO. Dekker AI-verktøy, maskinlæring i søkealgoritmer, automatisert innholdsoptimalisering."},
+{t:"ai-seo.no",c:"Praktiske guider for å bruke AI i SEO-arbeid. Prompt engineering, AI-assistert søkeordsanalyse, konkurrentovervåkning."},
+{t:"organisksynlighet.no",c:"Helhetlig ressurs om organisk synlighet. Synlighetsindekser, SEO-strategi, innholdsmarkedsføring, langsiktig merkevarebygging."},
+{t:"organisksøk.no",c:"Dyptgående innhold om organiske søkeresultater — hvordan de fungerer og strategier for dominans."},
+{t:"organisktrafikk.no",c:"Alt om å generere, analysere og øke organisk trafikk. Fra Analytics-oppsett til vekststrategier."},
+{t:"ai-søk.no",c:"Den nye æraen av AI-drevne søkemotorer. ChatGPT Search, Perplexity, Google AI Overviews."},
+{t:"søkemotor.com",c:"Kunnskapsbasen om søkemotorer — fra Googles historie til teknologien bak moderne informasjonsgjenfinning."},
+{t:"søkeoptimalisering.no",c:"Norges mest komplette guide til søkeoptimalisering. Den ultimate ressursen for alle som vil forstå og mestre SEO."}
+]},
+
+"om-oss":{title:"Om Seobyrå.com",sub:"Norges nye SEO-kraftsenter",icon:"Shield",hero:"Vi kombinerer tradisjonell søkemotoroptimalisering med banebrytende AI-søkeoptimalisering, støttet av Norges mest omfattende nettverk av autoritative kunnskapsportaler.",secs:[
+{t:"Vår tilnærming",c:"Datadrevet SEO med full transparens. Vi eier og drifter et nettverk av kunnskapsportaler som gir førstehånds innsikt i hva som faktisk fungerer i norske søkeresultater. Vi tester strategier på egne domener før implementering for kunder."},
+{t:"Tjenester",c:"Teknisk SEO: Crawlability, hastighet, Core Web Vitals, Schema.org. Innholdsstrategi: Søkeordsanalyse, topical authority, E-E-A-T. AI-søkeoptimalisering: ChatGPT, Perplexity, Google AI Overviews. Lenkebygging: Kvalitetslenker. Lokal SEO: Google Business, lokale landingssider. Konverteringsoptimalisering: CTA, A/B-testing."},
+{t:"En del av IT-FIRMA",c:"Seobyrå.com er en del av IT-FIRMA, et norsk teknologiselskap med bred kompetanse innen digital utvikling, hosting og markedsføring. Dette gir oss tilgang til teknisk infrastruktur og utviklingsressurser for helhetlige løsninger."}
+]}
+};
+
+// ── NAV DATA ──
+const NAV=[
+{id:"hjem",label:"Hjem"},
+{id:"tjenester",label:"Tjenester",ch:[{id:"teknisk-seo",l:"Teknisk SEO"},{id:"innholdsstrategi",l:"Innholdsstrategi"},{id:"aeo",l:"AI-søkeoptimalisering"},{id:"lenkebygging",l:"Lenkebygging"},{id:"lokal-seo",l:"Lokal SEO"},{id:"on-page-seo",l:"On-page SEO"},{id:"konvertering",l:"Konvertering"}]},
+{id:"kunnskap",label:"Kunnskap",ch:[{id:"sokemotorer",l:"Søkemotorer"},{id:"analyse",l:"Analyse & verktøy"},{id:"ordliste",l:"SEO-ordliste"}]},
+{id:"nettverk",label:"Nettverk"},
+{id:"om-oss",label:"Om oss"},
+{id:"kontakt",label:"Kontakt"}
+];
+
+// ══════════════════════════════════════════
+// NAVBAR
+// ══════════════════════════════════════════
+function Navbar(){
+  const{page,go}=useContext(Ctx);
+  const[scrolled,setScrolled]=useState(false);
+  useEffect(()=>{const h=()=>setScrolled(window.scrollY>40);window.addEventListener("scroll",h,{passive:true});return()=>window.removeEventListener("scroll",h)},[]);
+
+  return e("nav",{className:"nav"+(scrolled?" scrolled":"")},
+    e("div",{className:"nav-inner"},
+      e("button",{className:"nav-logo",onClick:()=>go("hjem")},
+        e("svg",{width:28,height:28,viewBox:"0 0 28 28",fill:"none"},e("rect",{width:28,height:28,rx:6,fill:"#c8ff00"}),e("text",{x:"50%",y:"55%",dominantBaseline:"middle",textAnchor:"middle",fontFamily:"Arial",fontWeight:"bold",fontSize:16,fill:"#08080a"},"S")),
+        e("span",null,"SEOBYRÅ",e("small",null,".com"))
+      ),
+      e("div",{className:"nav-links"},
+        NAV.map(item=>
+          e("div",{key:item.id,className:"nav-item"},
+            e("button",{className:"nav-btn"+(page===item.id?" active":""),onClick:()=>!item.ch&&go(item.id)},item.label,item.ch&&e(Ic.ChevDown,{s:12})),
+            item.ch&&e("div",{className:"nav-dropdown"},item.ch.map(ch=>
+              e("button",{key:ch.id,className:"nav-drop-btn"+(page===ch.id?" active":""),onClick:()=>go(ch.id)},
+                PAGES[ch.id]&&PAGES[ch.id].icon&&Ic[PAGES[ch.id].icon]?e(Ic[PAGES[ch.id].icon],{s:16}):null,ch.l
+              )
+            ))
+          )
+        ),
+        e("button",{className:"btn-cta",onClick:()=>go("kontakt")},"Gratis analyse")
+      )
+    )
+  );
+}
+
+// ══════════════════════════════════════════
+// HOME PAGE
+// ══════════════════════════════════════════
+function Home(){
+  const{go}=useContext(Ctx);
+  const svcs=[
+    {id:"teknisk-seo",icon:"Code",t:"Teknisk SEO",d:"Crawling, indeksering, Core Web Vitals, Schema.org og nettstedsarkitektur"},
+    {id:"innholdsstrategi",icon:"Pencil",t:"Innholdsstrategi",d:"Søkeordsanalyse, topical authority, E-E-A-T og innholdsproduksjon"},
+    {id:"aeo",icon:"Robot",t:"AI-søkeoptimalisering",d:"Synlighet i ChatGPT, Perplexity og Google AI Overviews"},
+    {id:"lenkebygging",icon:"Link",t:"Lenkebygging",d:"Strategisk autoritetsbygging gjennom kvalitetslenker"},
+    {id:"lokal-seo",icon:"MapPin",t:"Lokal SEO",d:"Google Business Profile og dominans i lokale søk"},
+    {id:"konvertering",icon:"Chart",t:"Konvertering",d:"Fra organisk trafikk til henvendelser og salg"},
+  ];
+
+  return e("div",null,
+    // HERO
+    e("header",{style:{minHeight:"100vh",display:"flex",alignItems:"center",position:"relative",overflow:"hidden",padding:"120px clamp(20px,4vw,48px) 80px"}},
+      e("div",{className:"glow",style:{top:"5%",right:"-5%",width:"50vw",height:"50vw",background:"radial-gradient(circle,rgba(200,255,0,.035) 0%,transparent 65%)",position:"absolute"}}),
+      e("div",{style:{position:"absolute",inset:0,background:"linear-gradient(180deg,transparent 60%,#08080a)",pointerEvents:"none"}}),
+      e("div",{className:"grid-line",style:{left:"10%"}}),
+      e("div",{className:"grid-line",style:{left:"30%"}}),
+      e("div",{className:"grid-line",style:{right:"20%"}}),
+      e("div",{className:"container",style:{position:"relative",zIndex:1}},
+        e(Reveal,null,e("div",{style:{display:"inline-flex",alignItems:"center",gap:8,padding:"7px 18px",border:"1px solid rgba(200,255,0,.2)",marginBottom:40,fontSize:"12.5px",fontWeight:500,color:"#c8ff00",letterSpacing:".04em"}},
+          e("span",{style:{width:6,height:6,background:"#c8ff00",borderRadius:"50%",animation:"pulse 2.5s infinite"}}),
+          "SEO + AEO — tradisjonell og AI-søkeoptimalisering"
+        )),
+        e(Reveal,{delay:.08},e("h1",{className:"heading",style:{fontSize:"clamp(2.8rem,6.5vw,5.8rem)",maxWidth:850}},
+          "Bli den kilden",e("br"),
+          e("span",{style:{fontWeight:600}},"søkemotorer")," og",e("br"),
+          e("em",{style:{color:"#c8ff00"}},"AI siterer")
+        )),
+        e(Reveal,{delay:.16},e("p",{style:{fontSize:"clamp(15px,1.6vw,18px)",lineHeight:1.7,color:"rgba(255,255,255,.45)",maxWidth:520,marginTop:28}},"Vi kombinerer søkemotoroptimalisering med AI-søkeoptimalisering for norske bedrifter. Resultatet: synlighet i Google, ChatGPT, Perplexity og AI Overviews.")),
+        e(Reveal,{delay:.24},e("div",{style:{display:"flex",gap:14,marginTop:44,flexWrap:"wrap"}},
+          e("button",{className:"btn-primary",onClick:()=>go("kontakt")},"Bestill gratis synlighetsanalyse ",e(Ic.Arrow,{s:16})),
+          e("button",{className:"btn-outline",onClick:()=>go("teknisk-seo")},"Utforsk kunnskapsbasen")
+        )),
+        e(Reveal,{delay:.35},e("div",{className:"hero-stats",style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:0,marginTop:72,borderTop:"1px solid rgba(255,255,255,.06)",paddingTop:36}},
+          [["150+","søkeord på side 1"],["47","aktive kunder"],["340%","snitt trafikkvekst"],["8+","års erfaring"]].map(([v,l],i)=>
+            e("div",{key:l,style:{borderLeft:i>0?"1px solid rgba(255,255,255,.06)":"none",paddingLeft:i>0?24:0}},
+              e("div",{style:{fontSize:"clamp(26px,3.5vw,40px)",fontWeight:700,letterSpacing:"-.03em",fontFamily:"var(--font-display)"}},v),
+              e("div",{style:{fontSize:"12.5px",color:"rgba(255,255,255,.3)",marginTop:4}},l)
+            ))
+        ))
+      )
+    ),
+
+    // SERVICES
+    e("section",{className:"section"},e("div",{className:"container"},
+      e(Reveal,null,
+        e("span",{className:"label"},"Tjenester"),
+        e("h2",{className:"heading",style:{fontSize:"clamp(1.8rem,3.5vw,2.8rem)",marginTop:12,marginBottom:56}},
+          "Helhetlig søkeoptimalisering",e("br"),"for den ",e("em",null,"nye æraen"))
+      ),
+      e("div",{className:"services-grid",style:{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:1}},
+        svcs.map((s,i)=>e(Reveal,{key:s.id,delay:i*.06},
+          e("button",{className:"service-card",onClick:()=>go(s.id)},
+            e("div",{style:{marginBottom:20,color:"#c8ff00"}},e(Ic[s.icon],{s:28})),
+            e("h3",{style:{fontSize:19,fontWeight:600,marginBottom:10,letterSpacing:"-.01em"}},s.t),
+            e("p",{style:{fontSize:14,lineHeight:1.65,color:"rgba(255,255,255,.4)"}},s.d),
+            e("div",{style:{display:"flex",alignItems:"center",gap:6,marginTop:20,fontSize:13,fontWeight:500,color:"#c8ff00"}},"Les mer ",e(Ic.Arrow,{s:14,c:"#c8ff00"}))
+          )
+        ))
+      )
+    )),
+
+    // AEO HIGHLIGHT
+    e("section",{style:{padding:"100px clamp(20px,4vw,48px)",borderTop:"1px solid rgba(200,255,0,.06)",borderBottom:"1px solid rgba(200,255,0,.06)",background:"linear-gradient(180deg,rgba(200,255,0,.015) 0%,transparent 100%)"}},
+      e("div",{className:"container aeo-grid",style:{display:"grid",gridTemplateColumns:"1.1fr 1fr",gap:72,alignItems:"center"}},
+        e(Reveal,null,e("div",null,
+          e("span",{className:"label"},"Ny disiplin"),
+          e("h2",{className:"heading",style:{fontSize:"clamp(1.8rem,3.5vw,2.6rem)",marginTop:12,marginBottom:20}},"AI-søk endrer alt.",e("br"),"Er din bedrift ",e("em",{style:{color:"#c8ff00"}},"forberedt?")),
+          e("p",{style:{fontSize:15,lineHeight:1.8,color:"rgba(255,255,255,.45)",marginBottom:14}},"ChatGPT, Perplexity og Google AI Overviews genererer nå svar med kilder. I stedet for ti blå lenker får brukeren ett svar og tre referanser."),
+          e("p",{style:{fontSize:15,lineHeight:1.8,color:"rgba(255,255,255,.45)",marginBottom:28}},"Vi sørger for at din bedrift er den referansen."),
+          e("button",{className:"btn-primary",style:{fontSize:13.5},onClick:()=>go("aeo")},"Lær om AEO ",e(Ic.Arrow,{s:14}))
+        )),
+        e(Reveal,{delay:.12},e("div",{style:{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:10,padding:32}},
+          e("div",{style:{fontSize:"11.5px",fontWeight:500,color:"rgba(255,255,255,.25)",letterSpacing:".06em",textTransform:"uppercase",marginBottom:20,display:"flex",alignItems:"center",gap:8}},e(Ic.Robot,{s:14,c:"rgba(255,255,255,.3)"})," AI-generert svar"),
+          e("div",{style:{background:"rgba(200,255,0,.04)",borderRadius:8,padding:20,border:"1px solid rgba(200,255,0,.08)",marginBottom:20}},
+            e("p",{style:{fontSize:14,lineHeight:1.7,color:"rgba(255,255,255,.65)"}},"For å forbedre organisk synlighet bør bedrifter fokusere på teknisk SEO, innholdskvalitet, strukturert data og AI-søkeoptimalisering...")
+          ),
+          e("div",{style:{fontSize:11,color:"rgba(255,255,255,.25)",marginBottom:10}},"Kilder"),
+          [{n:"seobyrå.com",h:true},{n:"kilde2.no"},{n:"kilde3.no"}].map(s=>
+            e("div",{key:s.n,style:{display:"flex",alignItems:"center",gap:10,padding:"9px 14px",marginBottom:6,borderRadius:6,background:s.h?"rgba(200,255,0,.06)":"rgba(255,255,255,.02)",border:s.h?"1px solid rgba(200,255,0,.12)":"1px solid transparent"}},
+              e("div",{style:{width:6,height:6,borderRadius:"50%",background:s.h?"#c8ff00":"rgba(255,255,255,.12)"}}),
+              e("span",{style:{fontSize:13,fontWeight:s.h?600:400,color:s.h?"#c8ff00":"rgba(255,255,255,.3)"}},s.n),
+              s.h&&e("span",{style:{fontSize:11,color:"rgba(255,255,255,.25)",marginLeft:"auto"}},"Din bedrift")
+            )
+          )
+        ))
+      )
+    ),
+
+    // RESULTS
+    e("section",{className:"section"},e("div",{className:"container"},
+      e(Reveal,null,e("span",{className:"label"},"Resultater"),e("h2",{className:"heading",style:{fontSize:"clamp(1.8rem,3.5vw,2.8rem)",marginTop:12,marginBottom:56}},"Dokumenterte ",e("em",null,"resultater"))),
+      e("div",{className:"cases-grid",style:{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14}},
+        [{ind:"Eiendom",m:"+340%",l:"Organisk trafikk",p:"12 mnd",b:"30%"},{ind:"Finans",m:"+520%",l:"Organiske leads",p:"8 mnd",b:"48%"},{ind:"Helse",m:"+180%",l:"Synlighetsindeks",p:"6 mnd",b:"66%"},{ind:"E-handel",m:"+290%",l:"Organisk omsetning",p:"10 mnd",b:"84%"}].map((c,i)=>
+          e(Reveal,{key:i,delay:i*.08},e("div",{className:"case-card"},
+            e("div",{className:"case-bar",style:{"--bar":c.b}}),
+            e("span",{style:{fontSize:11,fontWeight:600,color:"rgba(255,255,255,.25)",letterSpacing:".08em",textTransform:"uppercase"}},c.ind),
+            e("div",{style:{fontSize:44,fontWeight:700,color:"#c8ff00",letterSpacing:"-.04em",lineHeight:1,marginTop:16,fontFamily:"var(--font-display)"}},c.m),
+            e("div",{style:{fontSize:14,fontWeight:500,marginTop:8}},c.l),
+            e("div",{style:{fontSize:12,color:"rgba(255,255,255,.25)",marginTop:2}},c.p)
+          ))
+        )
+      )
+    )),
+
+    // CTA
+    e("section",{style:{padding:"80px clamp(20px,4vw,48px)",borderTop:"1px solid rgba(200,255,0,.06)"}},
+      e("div",{style:{maxWidth:700,margin:"0 auto",textAlign:"center"}},
+        e(Reveal,null,
+          e("h2",{className:"heading",style:{fontSize:"clamp(1.8rem,3.5vw,2.8rem)",marginBottom:16}},"Klar for å bli ",e("em",{style:{color:"#c8ff00"}},"synlig?")),
+          e("p",{style:{fontSize:15,color:"rgba(255,255,255,.45)",lineHeight:1.7,marginBottom:36}},"Vi analyserer nettstedet ditt, kartlegger konkurrentene, og gir deg en konkret handlingsplan. Helt gratis."),
+          e("button",{className:"btn-primary",onClick:()=>go("kontakt")},"Bestill gratis synlighetsanalyse ",e(Ic.Arrow,{s:16}))
+        )
+      )
+    )
+  );
+}
+
+// ══════════════════════════════════════════
+// CONTENT PAGE
+// ══════════════════════════════════════════
+function ContentPage({pid}){
+  const{go}=useContext(Ctx);
+  const pg=PAGES[pid];if(!pg)return null;
+  const I=Ic[pg.icon];
+  const allPages=Object.keys(PAGES).filter(k=>k!==pid);
+  const related=allPages.slice(0,3);
+
+  return e("div",null,
+    e("header",{style:{padding:"140px clamp(20px,4vw,48px) 60px",position:"relative",overflow:"hidden"}},
+      e("div",{className:"glow",style:{position:"absolute",top:0,right:"-10%",width:"40vw",height:"40vw",background:"radial-gradient(circle,rgba(200,255,0,.025) 0%,transparent 65%)"}}),
+      e("div",{className:"container-sm",style:{position:"relative",zIndex:1}},
+        e(Reveal,null,e("button",{style:{display:"flex",alignItems:"center",gap:6,background:"none",border:"none",color:"rgba(255,255,255,.35)",fontSize:13,cursor:"pointer",fontFamily:"inherit",marginBottom:32},onClick:()=>go("hjem")},
+          e("span",{style:{transform:"rotate(180deg)",display:"inline-flex"}},e(Ic.Arrow,{s:14}))," Tilbake til forsiden")),
+        e(Reveal,{delay:.05},e("div",{style:{display:"flex",alignItems:"center",gap:14,marginBottom:20}},
+          I&&e("div",{style:{color:"#c8ff00"}},e(I,{s:32})),
+          e("span",{className:"label"},pg.sub))),
+        e(Reveal,{delay:.1},e("h1",{className:"heading",style:{fontSize:"clamp(2.2rem,5vw,3.6rem)"}},pg.title)),
+        e(Reveal,{delay:.16},e("p",{style:{fontSize:"16.5px",lineHeight:1.75,color:"rgba(255,255,255,.5)",marginTop:24,maxWidth:700}},pg.hero))
+      )
+    ),
+    // TOC
+    pg.secs.length>3&&e("div",{style:{padding:"0 clamp(20px,4vw,48px)",marginBottom:48}},e("div",{className:"container-sm"},
+      e("div",{className:"toc"},
+        e("div",{style:{fontSize:12,fontWeight:600,color:"rgba(255,255,255,.3)",letterSpacing:".08em",textTransform:"uppercase",marginBottom:14}},"Innhold"),
+        e("div",{className:"toc-grid",style:{display:"grid",gridTemplateColumns:pg.secs.length>6?"1fr 1fr":"1fr",gap:"6px 24px"}},
+          pg.secs.map((s,i)=>e("div",{key:i,className:"toc-item"},e("span",{className:"toc-num"},String(i+1).padStart(2,"0")),s.t))
+        )
+      )
+    )),
+    // Content
+    e("div",{style:{padding:"0 clamp(20px,4vw,48px) 80px"}},e("div",{className:"container-sm"},
+      pg.secs.map((s,i)=>e(Reveal,{key:i,delay:.04},
+        e("article",{className:"content-section"},
+          e("div",{style:{display:"flex",alignItems:"baseline",gap:14,marginBottom:16}},
+            e("span",{style:{fontSize:11,fontWeight:700,color:"rgba(200,255,0,.3)",letterSpacing:".06em"}},String(i+1).padStart(2,"0")),
+            e("h2",null,s.t)),
+          s.c.split("\n\n").map((p,j)=>e("p",{key:j},p))
+        )
+      ))
+    )),
+    // Related
+    e("div",{style:{padding:"60px clamp(20px,4vw,48px) 80px",borderTop:"1px solid rgba(255,255,255,.04)"}},e("div",{className:"container"},
+      e(Reveal,null,e("h3",{className:"label",style:{marginBottom:28}},"Les videre")),
+      e("div",{className:"related-grid",style:{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:14}},
+        related.map((rid,i)=>{const rp=PAGES[rid];if(!rp)return null;const RI=Ic[rp.icon];
+          return e(Reveal,{key:rid,delay:i*.06},e("button",{className:"related-card",onClick:()=>go(rid)},
+            e("div",{style:{color:"#c8ff00",marginBottom:12}},RI&&e(RI,{s:22})),
+            e("h4",{style:{fontSize:16,fontWeight:600,marginBottom:6}},rp.title),
+            e("p",{style:{fontSize:13,color:"rgba(255,255,255,.35)",lineHeight:1.5}},rp.sub)
+          ));
+        })
+      )
+    ))
+  );
+}
+
+// ══════════════════════════════════════════
+// CONTACT PAGE
+// ══════════════════════════════════════════
+function Contact(){
+  return e("div",{style:{padding:"140px clamp(20px,4vw,48px) 80px"}},
+    e("div",{className:"container contact-grid",style:{maxWidth:1100,display:"grid",gridTemplateColumns:"1fr 1fr",gap:72}},
+      e(Reveal,null,e("div",null,
+        e("span",{className:"label"},"Kom i gang"),
+        e("h1",{className:"heading",style:{fontSize:"clamp(2rem,4vw,3rem)",marginTop:12,marginBottom:20}},"Gratis ",e("em",{style:{color:"#c8ff00"}},"synlighetsanalyse")),
+        e("p",{style:{fontSize:"15.5px",lineHeight:1.75,color:"rgba(255,255,255,.45)",marginBottom:36}},"Vi kartlegger din nåværende synlighet, analyserer konkurrentene, og gir deg en konkret handlingsplan."),
+        ["Teknisk SEO-sjekk","Konkurranseanalyse","Konkrete anbefalinger","Estimat på trafikkvekst","AEO-analyse: synlighet i AI-søk"].map(item=>
+          e("div",{key:item,style:{display:"flex",alignItems:"center",gap:12,marginBottom:14}},
+            e("div",{style:{width:20,height:20,borderRadius:3,background:"rgba(200,255,0,.08)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}},e(Ic.Check,{s:12,c:"#c8ff00"})),
+            e("span",{style:{fontSize:"14.5px",color:"rgba(255,255,255,.55)"}},item)
+          ))
+      )),
+      e(Reveal,{delay:.1},e("div",{style:{background:"rgba(255,255,255,.015)",border:"1px solid rgba(255,255,255,.06)",borderRadius:4,padding:"36px 32px"}},
+        [{l:"Navn",p:"Ditt navn",t:"text"},{l:"E-post",p:"din@epost.no",t:"email"},{l:"Nettside",p:"https://dinnettside.no",t:"text"}].map(f=>
+          e("div",{key:f.l,className:"form-group"},e("label",{className:"form-label"},f.l),e("input",{className:"form-input",type:f.t,placeholder:f.p}))
+        ),
+        e("div",{className:"form-group"},e("label",{className:"form-label"},"Melding"),e("textarea",{className:"form-input",placeholder:"Fortell oss kort om din bedrift og hva du ønsker å oppnå..."})),
+        e("button",{className:"btn-primary",style:{width:"100%",justifyContent:"center",padding:"16px 32px"}},"Send forespørsel"),
+        e("p",{style:{fontSize:"12.5px",color:"rgba(255,255,255,.2)",textAlign:"center",marginTop:16}},"Vi svarer innen 24 timer. Ingen bindingstid.")
+      ))
+    )
+  );
+}
+
+// ══════════════════════════════════════════
+// FOOTER
+// ══════════════════════════════════════════
+function Footer(){
+  const{go}=useContext(Ctx);
+  const cols=[
+    {h:"Tjenester",items:[{id:"teknisk-seo",l:"Teknisk SEO"},{id:"innholdsstrategi",l:"Innholdsstrategi"},{id:"aeo",l:"AI-søkeoptimalisering"},{id:"lenkebygging",l:"Lenkebygging"},{id:"lokal-seo",l:"Lokal SEO"}]},
+    {h:"Kunnskap",items:[{id:"sokemotorer",l:"Søkemotorer"},{id:"on-page-seo",l:"On-page SEO"},{id:"analyse",l:"Analyse & verktøy"},{id:"ordliste",l:"SEO-ordliste"}]},
+    {h:"Nettverk",items:[{l:"seoai.no"},{l:"ai-seo.no"},{l:"organisksynlighet.no"},{l:"organisksøk.no"},{l:"søkeoptimalisering.no"}]},
+    {h:"Selskap",items:[{id:"om-oss",l:"Om oss"},{id:"kontakt",l:"Kontakt"},{id:"nettverk",l:"Vårt nettverk"}]}
+  ];
+
+  return e("footer",{className:"footer"},e("div",{className:"container"},
+    e("div",{className:"footer-grid"},
+      e("div",null,
+        e("div",{style:{display:"flex",alignItems:"center",gap:8,marginBottom:14}},
+          e("svg",{width:24,height:24,viewBox:"0 0 28 28",fill:"none"},e("rect",{width:28,height:28,rx:6,fill:"#c8ff00"}),e("text",{x:"50%",y:"55%",dominantBaseline:"middle",textAnchor:"middle",fontFamily:"Arial",fontWeight:"bold",fontSize:16,fill:"#08080a"},"S")),
+          e("span",{style:{fontSize:16,fontWeight:700,fontFamily:"var(--font-display)"}},"SEOBYRÅ",e("span",{style:{fontWeight:400,color:"rgba(255,255,255,.3)",fontSize:12}},".com"))
+        ),
+        e("p",{style:{fontSize:"13.5px",color:"rgba(255,255,255,.3)",lineHeight:1.65,maxWidth:260}},"Norges SEO- og AEO-byrå. Vi gjør bedrifter synlige i søkemotorer og AI-genererte svar.")
+      ),
+      cols.map(col=>e("div",{key:col.h},
+        e("div",{className:"footer-heading"},col.h),
+        col.items.map(item=>item.id?
+          e("button",{key:item.l,className:"footer-link",onClick:()=>go(item.id)},item.l):
+          e("span",{key:item.l,className:"footer-link",style:{cursor:"default"}},item.l)
+        )
+      ))
+    ),
+    e("div",{className:"footer-bottom"},
+      e("span",{style:{fontSize:"12.5px",color:"rgba(255,255,255,.18)"}},"© 2026 Seobyrå.com — Alle rettigheter forbeholdt."),
+      e("span",{style:{fontSize:"12.5px",color:"rgba(255,255,255,.14)"}},"En del av ",e("span",{style:{color:"rgba(255,255,255,.3)",fontWeight:600}},"IT-FIRMA"))
+    )
+  ));
+}
+
+// ══════════════════════════════════════════
+// APP
+// ══════════════════════════════════════════
+function App(){
+  const[page,setPage]=useState("hjem");
+  const go=useCallback((id)=>{setPage(id);window.scrollTo({top:0,behavior:"smooth"})},[]);
+
+  const render=()=>{
+    if(page==="hjem")return e(Home);
+    if(page==="kontakt")return e(Contact);
+    if(PAGES[page])return e(ContentPage,{pid:page,key:page});
+    return e(Home);
+  };
+
+  return e(Ctx.Provider,{value:{page,go}},
+    e("div",null,e(Navbar),e("main",null,render()),e(Footer))
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(e(App));
+</script>
+</body>
+</html>
