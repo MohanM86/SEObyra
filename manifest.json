@@ -1,0 +1,13 @@
+{
+  "name": "Seobyrå.com — Norges ledende SEO-byrå",
+  "short_name": "Seobyrå",
+  "description": "Søkemotoroptimalisering, AEO og digital strategi. Norges største SEO-nettverk.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020204",
+  "theme_color": "#c8ff00",
+  "icons": [
+    {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"},
+    {"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
