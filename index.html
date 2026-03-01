@@ -43,7 +43,7 @@
 @keyframes hUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
 
 /* TICKER */
-.ticker{border-top:1px solid var(--w04);border-bottom:1px solid var(--w04);padding:1.2rem 0;overflow:hidden}.ticker__wrap{display:flex;animation:tickS 45s linear infinite;width:max-content}.ticker__item{display:flex;align-items:center;gap:2rem;padding:0 2rem;white-space:nowrap;font-size:.85rem;font-weight:500;color:var(--w3)}.ticker__dot{width:4px;height:4px;border-radius:50%;background:var(--lime);flex-shrink:0}@keyframes tickS{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker{border-top:1px solid rgba(200,255,0,.15);border-bottom:1px solid rgba(200,255,0,.15);background:rgba(200,255,0,.02);padding:1.2rem 0;overflow:hidden}.ticker__wrap{display:flex;animation:tickS 45s linear infinite;width:max-content}.ticker__item{display:flex;align-items:center;gap:2rem;padding:0 2rem;white-space:nowrap;font-size:.85rem;font-weight:600;color:var(--lime);text-shadow:0 0 20px rgba(200,255,0,.2)}.ticker__dot{width:4px;height:4px;border-radius:50%;background:var(--lime);flex-shrink:0}@keyframes tickS{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SECTIONS */
 .sec{padding:clamp(6rem,12vw,10rem) 0;position:relative}.sec__lb{font-family:var(--fm);font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--lime);font-weight:500;margin-bottom:1.2rem}.sec__hd{font-weight:800;font-size:clamp(2.5rem,5vw,4.2rem);letter-spacing:-.04em;line-height:1;margin-bottom:1.5rem}.sec__hd em{font-family:var(--fd);font-weight:400;font-style:italic}.sec__ds{font-size:1.08rem;color:var(--w5);max-width:600px;line-height:1.85;font-weight:300}.sec__top{margin-bottom:clamp(3rem,6vw,5rem)}.sec__top--c{text-align:center;display:flex;flex-direction:column;align-items:center}.sec--alt{background:var(--s1)}.sec__div{height:1px;background:var(--w04)}
@@ -103,7 +103,7 @@
 <li><a href="/prosess"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 12l4-5 3 3 5-7"/></svg>Prosess</a></li>
 <li><a href="/om-oss"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>Om oss</a></li>
 <li><a href="/resultater"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z"/></svg>Resultater</a></li>
-<li><a href="/okosystem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2"/><circle cx="8" cy="3" r="1"/><circle cx="13" cy="8" r="1"/><circle cx="8" cy="13" r="1"/><circle cx="3" cy="8" r="1"/></svg>Økosystem</a></li>
+<li><a href="#artikler"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2z"/><path d="M10 6H8M10 9H8M10 12H8"/></svg>Guider</a></li><li><a href="/okosystem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2"/><circle cx="8" cy="3" r="1"/><circle cx="13" cy="8" r="1"/><circle cx="8" cy="13" r="1"/><circle cx="3" cy="8" r="1"/></svg>Økosystem</a></li>
 <li><a href="/kontakt" class="nav__cta">Kontakt oss</a></li>
 </ul>
 <button class="nav__h" id="hb" aria-label="Meny"><span></span><span></span><span></span></button>
@@ -192,25 +192,35 @@
 <a href="https://xn--skemotor-54a.com" target="_blank" rel="noopener" class="eco__pill" style="color:#0ea5e9">søkemotor.com</a>
 <a href="https://sitemap.no" target="_blank" rel="noopener" class="eco__pill" style="color:#3b82f6">sitemap.no</a>
 <a href="https://indeksering.no" target="_blank" rel="noopener" class="eco__pill" style="color:#14b8a6">indeksering.no</a>
+<a href="https://nettadresse.no" target="_blank" rel="noopener" class="eco__pill" style="color:#f43f5e">nettadresse.no</a>
+<a href="https://affiliaten.no" target="_blank" rel="noopener" class="eco__pill" style="color:#fb923c">affiliaten.no</a>
+<a href="https://pagespeed.no" target="_blank" rel="noopener" class="eco__pill" style="color:#22d3ee">pagespeed.no</a>
+<a href="https://mobilvennlig.no" target="_blank" rel="noopener" class="eco__pill" style="color:#a78bfa">mobilvennlig.no</a>
+<a href="https://schema.no" target="_blank" rel="noopener" class="eco__pill" style="color:#facc15">schema.no</a>
+<a href="https://manneinfluensa.no" target="_blank" rel="noopener" class="eco__pill" style="color:#f87171">manneinfluensa.no</a>
+<a href="https://omega-3.no" target="_blank" rel="noopener" class="eco__pill" style="color:#38bdf8">omega-3.no</a>
+<a href="https://vitamind.no" target="_blank" rel="noopener" class="eco__pill" style="color:#fbbf24">vitamind.no</a>
+<a href="https://uranium.no" target="_blank" rel="noopener" class="eco__pill" style="color:#4ade80">uranium.no</a>
+<a href="https://lithium.no" target="_blank" rel="noopener" class="eco__pill" style="color:#c084fc">lithium.no</a>
 <span class="eco__pill eco__pill--active" style="color:#c8ff00;font-weight:700">seobyrå.com ✓</span>
 </div></div></div></section>
 
-<section style="text-align:center;padding:clamp(6rem,12vw,10rem) 0;position:relative;overflow:hidden" id="kontakt"><div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 5
 <!-- ARTIKLER / BLOGG -->
-<section class="sec" id="artikler" style="padding:clamp(4rem,8vw,6rem) 0"><div class="ctn">
-<p class="sec__lb" style="font-family:var(--fm);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--lime);margin-bottom:.8rem">Kunnskapsbasen</p>
-<h2 style="font-weight:800;font-size:clamp(1.8rem,3.5vw,2.8rem);letter-spacing:-.03em;line-height:1.1;margin-bottom:2rem">Dybdeartikler om <em style="font-family:var(--fd);font-weight:400;font-style:italic">SEO</em></h2>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem" class="artg">
+<section style="padding:clamp(4rem,8vw,6rem) 0" id="artikler"><div class="ctn">
+<div class="sec__lb" style="text-align:center">Kunnskapsbasen</div>
+<h2 class="sec__hd" style="text-align:center;margin-bottom:.8rem">Dybdeartikler om <em>SEO</em></h2>
+<p style="font-size:1rem;color:var(--w5);max-width:500px;margin:0 auto 2.5rem;text-align:center;font-weight:300;line-height:1.8">Utforsk våre guider — fra grunnleggende SEO til avanserte strategier.</p>
+<div class="artg">
 <a href="/hva-er-seo" class="artc"><span class="artc__cat" style="color:var(--lime)">SEO</span><strong>Hva er SEO?</strong><span class="artc__tx">Komplett guide til søkemotoroptimalisering.</span></a>
 <a href="/hva-er-sokemotoroptimalisering" class="artc"><span class="artc__cat" style="color:var(--lime)">SEO</span><strong>Søkemotoroptimalisering</strong><span class="artc__tx">SEO forklart på norsk.</span></a>
 <a href="/hvorfor-er-seo-viktig" class="artc"><span class="artc__cat" style="color:var(--lime)">SEO</span><strong>Hvorfor er SEO viktig?</strong><span class="artc__tx">7 grunner for bedrifter.</span></a>
-<a href="/seo-pris" class="artc"><span class="artc__cat" style="color:#f59e0b">Priser</span><strong>Hva koster SEO?</strong><span class="artc__tx">Prisguide 2026.</span></a>
+<a href="/seo-pris" class="artc"><span class="artc__cat" style="color:#f59e0b">Priser</span><strong>Hva koster SEO?</strong><span class="artc__tx">Prisguide for norske bedrifter.</span></a>
 <a href="/seo-vs-sem" class="artc"><span class="artc__cat" style="color:var(--lime)">SEO</span><strong>SEO vs. SEM</strong><span class="artc__tx">Organisk vs. betalt søk.</span></a>
-<a href="/hvordan-bli-god-pa-seo" class="artc"><span class="artc__cat" style="color:#06b6d4">Lær</span><strong>Bli god på SEO</strong><span class="artc__tx">Steg-for-steg læringsplan.</span></a>
+<a href="/hvordan-bli-god-pa-seo" class="artc"><span class="artc__cat" style="color:#06b6d4">Lær SEO</span><strong>Bli god på SEO</strong><span class="artc__tx">Steg-for-steg læringsplan.</span></a>
 <a href="/seo-strategi" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>SEO-strategi</strong><span class="artc__tx">Planlegg veien til #1.</span></a>
 <a href="/seo-analyse" class="artc"><span class="artc__cat" style="color:#8b5cf6">Teknisk</span><strong>SEO-analyse</strong><span class="artc__tx">Kartlegg muligheter.</span></a>
 <a href="/seo-tittel" class="artc"><span class="artc__cat" style="color:#8b5cf6">Teknisk</span><strong>SEO-tittelen</strong><span class="artc__tx">Title tags som konverterer.</span></a>
-<a href="/hvordan-jobbe-med-seo" class="artc"><span class="artc__cat" style="color:#06b6d4">Lær</span><strong>Jobbe med SEO</strong><span class="artc__tx">Praktisk guide for bedrifter.</span></a>
+<a href="/hvordan-jobbe-med-seo" class="artc"><span class="artc__cat" style="color:#06b6d4">Lær SEO</span><strong>Jobbe med SEO</strong><span class="artc__tx">Praktisk guide for bedrifter.</span></a>
 <a href="/seo-optimalisering" class="artc"><span class="artc__cat" style="color:var(--lime)">SEO</span><strong>SEO-optimalisering</strong><span class="artc__tx">Steg for steg.</span></a>
 <a href="/seo-instagram" class="artc"><span class="artc__cat" style="color:#e11d48">SoMe</span><strong>SEO på Instagram</strong><span class="artc__tx">Optimaliser profilen.</span></a>
 <a href="/digital-markedsforing" class="artc"><span class="artc__cat" style="color:#10b981">Marketing</span><strong>Digital markedsføring</strong><span class="artc__tx">Komplett oversikt.</span></a>
@@ -219,14 +229,15 @@
 <a href="/4-p-ene" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>De 4 P-ene</strong><span class="artc__tx">Markedsføringsmiksen.</span></a>
 <a href="/7-p-ene" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>De 7 P-ene</strong><span class="artc__tx">Utvidet markedsføringsmiks.</span></a>
 <a href="/some-markedsforing" class="artc"><span class="artc__cat" style="color:#e11d48">SoMe</span><strong>SoMe-markedsføring</strong><span class="artc__tx">Sosiale medier for bedrifter.</span></a>
-<a href="/datadrevet-markedsforing" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>Datadrevet</strong><span class="artc__tx">Bedre beslutninger med data.</span></a>
+<a href="/datadrevet-markedsforing" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>Datadrevet markedsføring</strong><span class="artc__tx">Bedre beslutninger med data.</span></a>
 <a href="/markedsforingsstrategi" class="artc"><span class="artc__cat" style="color:#f59e0b">Strategi</span><strong>Markedsføringsstrategi</strong><span class="artc__tx">Lag en som virker.</span></a>
 </div></div></section>
-0% at 50% 50%,rgba(200,255,0,.03),transparent)"></div><div class="ctn" style="position:relative"><div class="r">
+
+<section style="text-align:center;padding:clamp(6rem,12vw,10rem) 0;position:relative;overflow:hidden" id="kontakt"><div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(200,255,0,.03),transparent)"></div><div class="ctn" style="position:relative"><div class="r">
 <h2 style="font-weight:800;font-size:clamp(3rem,6vw,5rem);letter-spacing:-.04em;line-height:.95;margin-bottom:2rem">Klar for å bli<br><span style="color:var(--lime)">synlig?</span></h2>
 <p style="font-size:1.1rem;color:var(--w5);max-width:540px;margin:0 auto 2.5rem;line-height:1.8;font-weight:300">Book en gratis analyse av nettstedet ditt. Vi viser deg nøyaktig hvor mulighetene ligger.</p>
 <a href="/kontakt" class="bt bt--l">Book gratis analyse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-</div></div></section>
+</div></div></div></section>
 
 <footer class="ft"><div class="ctn">
 <div class="ft__top">
@@ -235,7 +246,8 @@
 <a href="https://it-firma.no" target="_blank" rel="noopener" class="ft__itfirma"><div><div class="ft__itfirma-badge">Driftes av</div><div class="ft__itfirma-name">IT-FIRMA</div></div></a></div>
 <div class="ft__c"><h4>Tjenester</h4><a href="/tjenester/seo-strategi">SEO-strategi</a><a href="/tjenester/teknisk-seo">Teknisk SEO</a><a href="/tjenester/innholdsstrategi">Innholdsstrategi</a><a href="/tjenester/aeo">AEO — AI-søk</a><a href="/tjenester/lokal-seo">Lokal SEO</a><a href="/tjenester/ehandel-seo">E-handel SEO</a><a href="/tjenester/lenkebygging">Lenkebygging</a><a href="/tjenester/seo-audit">SEO Audit</a></div>
 <div class="ft__c"><h4>Selskapet</h4><a href="/om-oss">Om oss</a><a href="/prosess">Vår prosess</a><a href="/resultater">Resultater</a><a href="/okosystem">Økosystemet</a><a href="/blogg">Blogg</a><a href="/ressurser">Ressurser</a><a href="/kontakt">Kontakt</a><a href="/personvern">Personvern</a></div>
-<div class="ft__c"><h4>Økosystem</h4><a href="https://sitemap.no" target="_blank">Sitemap.no</a><a href="https://indeksering.no" target="_blank">Indeksering.no</a><a href="https://xn--skeoptimalisering-00b.no" target="_blank">Søkeoptimalisering.no</a><a href="https://xn--skemotor-54a.com" target="_blank">Søkemotor.com</a><a href="https://seoai.no" target="_blank">SeoAI.no</a><a href="https://ai-seo.no" target="_blank">AI-SEO.no</a><a href="https://it-firma.no" target="_blank">IT-FIRMA.no</a></div>
+<div class="ft__c"><h4>Guider</h4><a href="/hva-er-seo">Hva er SEO?</a><a href="/seo-pris">Hva koster SEO?</a><a href="/seo-strategi">SEO-strategi</a><a href="/seo-analyse">SEO-analyse</a><a href="/digital-markedsforing">Digital markedsføring</a><a href="/hvordan-bli-god-pa-seo">Bli god på SEO</a><a href="/4-p-ene">De 4 P-ene</a><a href="/seo-vs-sem">SEO vs. SEM</a></div>
+<div class="ft__c"><h4>Økosystem</h4><a href="https://sitemap.no" target="_blank">Sitemap.no</a><a href="https://indeksering.no" target="_blank">Indeksering.no</a><a href="https://nettadresse.no" target="_blank">Nettadresse.no</a><a href="https://affiliaten.no" target="_blank">Affiliaten.no</a><a href="https://pagespeed.no" target="_blank">Pagespeed.no</a><a href="https://mobilvennlig.no" target="_blank">Mobilvennlig.no</a><a href="https://schema.no" target="_blank">Schema.no</a><a href="https://xn--skeoptimalisering-00b.no" target="_blank">Søkeoptimalisering.no</a><a href="https://xn--skemotor-54a.com" target="_blank">Søkemotor.com</a><a href="https://seoai.no" target="_blank">SeoAI.no</a><a href="https://ai-seo.no" target="_blank">AI-SEO.no</a><a href="https://manneinfluensa.no" target="_blank">Manneinfluensa.no</a><a href="https://omega-3.no" target="_blank">Omega-3.no</a><a href="https://vitamind.no" target="_blank">VitaminD.no</a><a href="https://uranium.no" target="_blank">Uranium.no</a><a href="https://lithium.no" target="_blank">Lithium.no</a><a href="https://it-firma.no" target="_blank">IT-FIRMA.no</a></div>
 </div>
 <div class="ft__bot"><div class="ft__cp">&copy; 2026 Seobyrå.com &mdash; <a href="https://it-firma.no" target="_blank" rel="noopener">IT-FIRMA</a></div></div>
 </div></footer>
